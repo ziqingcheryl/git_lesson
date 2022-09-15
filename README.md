@@ -79,7 +79,7 @@ Your job will be to replace the last line of the dialog, don't worry I wrote a s
 
 ```bash
 # Your answer
-sh replace_in_file character1/Ygritte.txt "[???]"
+sh replace_in_file character1/Ygritte.txt "Really? Eat my sword!""
 ```
 
 Perfect now that you have done a modification on a file, you can commit it on git.
@@ -168,7 +168,7 @@ python display_dialog.py --char1 character1/James.txt --char2 character2/Sylvia.
 
 ```bash
 # Your answer
-sh replace_in_file character1/James.txt "[???]"
+sh replace_in_file character1/James.txt "Bombaya"
 ```
 
 **<font color='#ffb799'>And now update changes on remote server</font>**
@@ -211,7 +211,7 @@ python display_dialog.py --char1 character1/voice_fc.txt --char2 character2/Tyle
 
 ```bash
 # Your answer
-sh replace_in_file character2/Tyler.txt "[???]"
+sh replace_in_file character2/Tyler.txt "You do not talk about fight club."
 ```
 
 **<font color='#ffb799'>And now update changes on remote server</font>**
@@ -253,7 +253,7 @@ python display_dialog.py --char1 character1/appollo13.txt --char2 character2/Jim
 
 ```bash
 # Your answer
-sh replace_in_file character2/Jim.txt "[???]"
+sh replace_in_file character2/Jim.txt "I've been captured by aliens!"
 ```
 
 **<font color='#ffb799'>And now update changes on remote server</font>**
@@ -296,7 +296,7 @@ python display_dialog.py --char1 character1/Marty.txt --char2 character2/Emmet.t
 
 ```bash
 # Your anwser
-sh replace_in_file character2/Emmet.txt "[???]"
+sh replace_in_file character2/Emmet.txt "Let's fly instead"
 ```
 
 **<font color='#ffb799'>And now update changes on remote server</font>**
@@ -343,7 +343,7 @@ For this time I'll give you the answer, Luke said *"NOOOOOOOOOOOOOO NOOOOOOOO"* 
 
 ```bash
 # Your answer
-sh replace_in_file character2/Luke.txt "[???]"
+sh replace_in_file character2/Luke.txt "NOOOOOOOOOOOOOO NOOOOOOOO"
 ```
 
 **<font color='#ffb799'>Now commit your changes (but don't push)</font>**
@@ -411,8 +411,7 @@ git status
 
 
 ```bash
-# Your answer
-python display_dialog.py --char1 character1/Marty.txt --char2 character2/Emmet.txt
+python display_dialog.py --char1 character1/DarthVader.txt --char2 character2/Luke.txt
 ```
 
 **<font color='#ffb799'>Push your changes to the remote server.</font>**
@@ -420,7 +419,7 @@ python display_dialog.py --char1 character1/Marty.txt --char2 character2/Emmet.t
 
 ```bash
 # Your answer
-git status
+git add .
 ```
 
 
@@ -458,7 +457,7 @@ python display_dialog.py --char1 character1/Forrest.txt --char2 character2/Lady.
 
 ```bash
 # Your answer
-sh replace_in_file character1/Forrest.txt "[???]"
+sh replace_in_file character1/Forrest.txt "life is a bot of chocolate."
 ```
 
 
@@ -492,13 +491,13 @@ Perfect now let's imagine that we want to go back to the status we had before th
 
 ```bash
 # Your answer
-git revert 85bd303
+git reflog
 ```
 
 
 ```bash
 # Your answer
-git status
+git revert 6516494 
 ```
 
 
@@ -511,6 +510,12 @@ git add .
 ```bash
 # Your answer
 git commit -m 'gump2'
+git push origin master
+sh replace_in_file character1/Forrest.txt "life is a bot of chocolate."
+git add .
+git status
+git commit -m 'gump_inbranch'
+git push origin gump
 ```
 
 # Exercise 8: Creating a branch 
@@ -518,6 +523,17 @@ git commit -m 'gump2'
 ***<font color='#ffb799'>Questions</font>***
 - **<font color='#ffb799'>Create a new branch and go on it.</font>**
 - **<font color='#ffb799'>Do the Forrest Gump correction (like in the begining of the previous exercise) and push it on the new branch.</font>**
+
+```bash
+ # My answer
+ git branch gump
+ git checkout gump
+ sh replace_in_file character1/Forrest.txt "life is a bot of chocolate."
+ git status
+ git add .
+ git commit -m "gump_inbranch"
+ git push origin gump
+ ```
 
 # Exercise 8: Changing Branch 
 #### We will work with our last movie **Titanic** let's see the dialog:
@@ -528,12 +544,26 @@ git commit -m 'gump2'
 - **<font color='#ffb799'>edit answer/Jack.txt file with the replace_in_file script</font>**
 - **<font color='#ffb799'>Push changes to the master branch</font>**
 
+
+
 # Exercise 9: Merging two branches 
 #### Now we will merge the branch you created into the master branch.
 ***<font color='#ffb799'>Questions</font>***
 - **<font color='#ffb799'>Merge the branch you created in Exercise 7 in the master branch</font>**
 <br/>
 <br/>
+
+```bash
+#My answer
+git branch
+git checkout master
+sh replace_in_file character2/Jack.txt "KING OF THE WORLD"
+git add .
+git commit -m 'jack'
+git push origin master
+git merge gump
+git push origin master
+```
 
 ***Pro-tips***
 > - Merging branches is not so trivial it could leads to conflicts. Normally you did not have any in the previous exercise and we will conver how to handle them in the next git learning session.
