@@ -544,7 +544,15 @@ git push origin gump
 - **<font color='#ffb799'>edit answer/Jack.txt file with the replace_in_file script</font>**
 - **<font color='#ffb799'>Push changes to the master branch</font>**
 
-
+```bash
+#My answer
+git branch
+git checkout master
+sh replace_in_file character2/Jack.txt "KING OF THE WORLD"
+git add .
+git commit -m 'jack'
+git push origin master
+```
 
 # Exercise 9: Merging two branches 
 #### Now we will merge the branch you created into the master branch.
@@ -555,12 +563,6 @@ git push origin gump
 
 ```bash
 #My answer
-git branch
-git checkout master
-sh replace_in_file character2/Jack.txt "KING OF THE WORLD"
-git add .
-git commit -m 'jack'
-git push origin master
 git merge gump
 git push origin master
 ```
