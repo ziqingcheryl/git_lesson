@@ -38,7 +38,7 @@ Of course each command could be reversed, but some of them are harder to reverse
 
 ```bash
 # Your answer
-
+git clone git@github.com:ziqingcheryl/git_lesson.git
 ```
 
 If everything is good you should see a directory named **git_lesson** in the following output:
@@ -89,7 +89,7 @@ Perfect now that you have done a modification on a file, you can commit it on gi
 
 ```bash
 # Your answer
-
+git commit -m 'Ygritte'
 ```
 
 Did not work? that's normal you can't commit files that you did not add to your local changes. To see the files that have changes we usually use `git status`
@@ -106,13 +106,13 @@ git status
 
 ```bash
 # Your answer
-
+git add .
 ```
 
 
 ```bash
 # Your answer
-
+git commit -m 'Ygritte'
 ```
 
 **Bravo!** You have done you're first commit
@@ -125,7 +125,7 @@ git status
 
 ```bash
 # Your answer
-
+git push origin master
 ```
 
 Easy right? Now you can check that everything is ok on the github page.
@@ -176,25 +176,25 @@ sh replace_in_file character1/James.txt "[???]"
 
 ```bash
 # Your answer
-
+git add .
 ```
 
 
 ```bash
 # Your answer
-
+git commit -m 'bond'
 ```
 
 
 ```bash
 # Your answer
-
+git status
 ```
 
 
 ```bash
 # Your answer
-
+git push origin master
 ```
 
 ### 5.2 Fight Club
@@ -216,28 +216,27 @@ sh replace_in_file character2/Tyler.txt "[???]"
 
 **<font color='#ffb799'>And now update changes on remote server</font>**
 
-
 ```bash
 # Your answer
-
+git add .
 ```
 
 
 ```bash
 # Your answer
-
+git commit -m 'fight'
 ```
 
 
 ```bash
 # Your answer
-
+git status
 ```
 
 
 ```bash
 # Your answer
-
+git push origin master
 ```
 
 ### 5.3 Apollo 13
@@ -262,25 +261,25 @@ sh replace_in_file character2/Jim.txt "[???]"
 
 ```bash
 # Your answer
-
+git add .
 ```
 
 
 ```bash
 # Your answer
-
+git commit -m 'apollo'
 ```
 
 
 ```bash
 # Your answer
-
+git status
 ```
 
 
 ```bash
 # Your answer
-
+git push origin master
 ```
 
 ### 5.4 Back to the future part II
@@ -305,25 +304,25 @@ sh replace_in_file character2/Emmet.txt "[???]"
 
 ```bash
 # Your answer
-
+git add .
 ```
 
 
 ```bash
 # Your answer
-
+git commit -m 'back'
 ```
 
 
 ```bash
 # Your answer
-
+git status
 ```
 
 
 ```bash
 # Your answer
-
+git push origin master
 ```
 
 # Exercise 6: Revert a local commit
@@ -352,19 +351,19 @@ sh replace_in_file character2/Luke.txt "[???]"
 
 ```bash
 # Your answer
-
+git add .
 ```
 
 
 ```bash
 # Your answer
-
+git commit -m 'future'
 ```
 
 
 ```bash
 # Your answer
-
+git status
 ```
 
 Ok, in fact I was wrong Luke didn't said it twice, it think it was just one simple *"NOOOOO"*.
@@ -379,19 +378,19 @@ Ok, in fact I was wrong Luke didn't said it twice, it think it was just one simp
 
 ```bash
 # Your answer
-
+sh replace_in_file character2/Luke.txt "NOOOOO"
 ```
 
 
 ```bash
 # Your answer
-
+git add .
 ```
 
 
 ```bash
-# Your anwser
-
+# Your answer
+git commit -m 'future2'
 ```
 
 Well after reviewing the scene (that you can find just here: https://www.youtube.com/watch?v=bv20ZoBcdO8 we were right in the first place.
@@ -401,19 +400,19 @@ Well after reviewing the scene (that you can find just here: https://www.youtube
 
 ```bash
 # Your answer
-
+git reset HEAD~1
 ```
 
 
 ```bash
 # Your answer
-
+git status
 ```
 
 
 ```bash
 # Your answer
-
+python display_dialog.py --char1 character1/Marty.txt --char2 character2/Emmet.txt
 ```
 
 **<font color='#ffb799'>Push your changes to the remote server.</font>**
@@ -421,13 +420,13 @@ Well after reviewing the scene (that you can find just here: https://www.youtube
 
 ```bash
 # Your answer
-
+git status
 ```
 
 
 ```bash
 # Your answer
-
+git push origin master
 ```
 
 You just reverted a local commit and pushed, well done!
@@ -465,25 +464,25 @@ sh replace_in_file character1/Forrest.txt "[???]"
 
 ```bash
 # Your answer
-
+git add . 
 ```
 
 
 ```bash
 # Your answer
-
+git commit -m 'gump'
 ```
 
 
 ```bash
 # Your answer
-
+git status
 ```
 
 
 ```bash
 # Your answer
-
+git push origin master
 ```
 
 Perfect now let's imagine that we want to go back to the status we had before this exercise.
@@ -493,25 +492,25 @@ Perfect now let's imagine that we want to go back to the status we had before th
 
 ```bash
 # Your answer
-
+git revert 85bd303
 ```
 
 
 ```bash
 # Your answer
-
+git status
 ```
 
 
 ```bash
 # Your answer
-
+git add .
 ```
 
 
 ```bash
 # Your answer
-
+git commit -m 'gump2'
 ```
 
 # Exercise 8: Creating a branch 
