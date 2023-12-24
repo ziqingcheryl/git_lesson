@@ -581,3 +581,8 @@ git push origin master
 - **Find two friends and:**
 Try to put one by one the names of all the attendees of the session, all at the same time in a file. This will obviously generate conflicts that you'll have to manage.
 
+# git commit all except some folder:
+```bash
+git add --all -- ':!/folder/*'
+```
+
