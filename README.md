@@ -586,3 +586,9 @@ Try to put one by one the names of all the attendees of the session, all at the 
 git add --all -- ':!/folder/*'
 ```
 
+# git set url so that to compare with original database
+```bash
+git remote set-url origin <new-url>
+```
+
+
